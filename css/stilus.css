@@ -1,0 +1,221 @@
+body,
+  html {
+    color: black;
+    font-weight: normal;
+    font-family: sans-serif;
+    background-color:#eeb57c;
+  }
+header {
+    
+    color:white;
+    background-image: url("../img/turazas1.jpg");
+    background-color: #804000 ;
+    background-size:cover;
+    background-repeat: no-repeat;
+    opacity:inherit;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+    border: 1px solid #804000;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 40px;
+    font-size: x-large;
+  }
+  footer {
+    
+    color: white;
+    background:#804000;
+    text-align: center;
+    border: 1px solid #804000;
+    border-bottom: none;
+    border-radius: 0px 0px 10px 10px;
+    padding: 40px;
+    font-size: x-large;
+  }
+  h3{
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+  }
+  form, .content  {
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #804000;
+    background: #ffce99;
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+  }
+  .input-group {
+    margin: 10px 0px 10px 0px;
+  }
+  .input-group label {
+    display: block;
+    text-align: right;
+    margin: 3px;
+  }
+  .input-group input {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #804000;
+    background: #ffce99
+  }
+  .btn {
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background: #804000;
+    border: none;
+    border-radius: 5px;
+  }
+  .error {
+   
+    margin: 0px auto; 
+    padding: 10px; 
+    border: 1px solid #a94442; 
+    color: #a94442; 
+    background: #f2dede; 
+    border-radius: 5px; 
+    text-align: left;
+  }
+  .success {
+    color: #3c763d; 
+    background: #dff0d8; 
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
+  }
+  .dropdown-menu{
+    background-color:#ffce99;
+    width: 300px !important;  
+  }
+  @media screen and (min-width: 600px) {
+    .custom-border-right {
+        border-right: 2px solid white;
+    }
+    .carousel .carousel-item {
+      height: 350px;
+    }
+    
+    .carousel-item img {
+        position: absolute;
+        object-fit:cover;
+        top: 0;
+        left: 0;
+        min-height: 200px;
+    }
+}
+
+  .custom-menu{
+    background-color: #105714;
+    border-radius: 0px 0px 10px 10px;
+   
+  }
+
+  .welcome-massege{
+    background-color: #3c763d;
+    border-radius: 0px 0px 10px 10px;
+    max-width: 700px;
+    text-align: center;
+    color: white;
+  }
+
+  .form{
+    
+    margin-bottom: 5%;
+    width: 60%;
+  }
+  .form .form-control{
+    border-radius:1rem;
+    margin-bottom: 3%;
+}
+.form  input[type=file]{
+  margin-bottom: 5% ;
+}
+.image{
+  text-align: justify;
+  width: 75%;
+}
+.image img{
+  border-radius: 6rem;
+  max-height: 200PX;
+}
+.contact-form form{
+  padding: 14%;
+  width: 60%;
+}
+.contact-form form .row{
+  margin-bottom: -7%;
+}
+.contact-form h3{
+  margin-bottom: 8%;
+  margin-top: -10%;
+  text-align: center;
+  color:#fff;
+}
+.contact-form .btnContact {
+  width: 50%;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5%;
+  background:#804000;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.btnContactSubmit
+{
+  width: 50%;
+  border-radius: 1rem;
+  padding: 1.5%;
+  color: #fff;
+  background-color: #0062cc;
+  border: none;
+  cursor: pointer;
+}
+header .fluid-container img{
+
+  max-height: 200px;
+
+}
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
+.carousel{
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
+}
+@media screen and (min-width: 800px) {
+.carousel .carousel-item {
+  height: 600px;
+}
+.slider-size{
+  max-width: 85%;
+}
+
+
+.carousel-item img {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+    
+
+}}
+.welcome-background{
+  margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #804000;
+    background: #ffce99;
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+
+
