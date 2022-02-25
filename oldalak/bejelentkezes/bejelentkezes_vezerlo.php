@@ -25,6 +25,7 @@ switch($route->GetMuvelet())
         if (count($eredmeny) == 1) {
           $eredmeny = $eredmeny[0];
           $user->Login($eredmeny['id'],$felhasznalonev,$eredmeny['email'],$eredmeny['jogosultsag']);
+          header("location: index.php");
           
 
         }else {
