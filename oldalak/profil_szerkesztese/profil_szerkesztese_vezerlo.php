@@ -18,12 +18,15 @@ $row=mysqli_fetch_array($query);
         $result = mysqli_query($kapcs->db, $query) or die(mysqli_error($kapcs->db));
 
         $user->Logout(1,'Teszt1','teszt1@teszt.hu','felhasznalo');
-        $user->Login($id,$uj_felhasznalonev,$row['email'],$row['jogosultsag']);
-        
-    ?><script type="text/javascript">
+        ?> <script type="text/javascript">
     alert("Update Successfull.");
     </script>
-        <?php 
+    <?php 
+        $user->Login($id,$uj_felhasznalonev,$row['email'],$row['jogosultsag']);
+        header("Refresh:0");
+        
+   
+        
     
 }
 
