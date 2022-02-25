@@ -19,11 +19,11 @@ $row=mysqli_fetch_array($query);
 
         $user->Logout(1,'Teszt1','teszt1@teszt.hu','felhasznalo');
         $user->Login($id,$uj_felhasznalonev,$row['email'],$row['jogosultsag']);
-        location()
+        
     ?><script type="text/javascript">
     alert("Update Successfull.");
     </script>
-        <?php
+        <?php 
     
 }
 
