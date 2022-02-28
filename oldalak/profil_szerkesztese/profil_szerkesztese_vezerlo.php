@@ -4,8 +4,8 @@ $info="";
 
 
 $id=$user->GetId();
-$query=mysqli_query($kapcs->db,"SELECT * FROM felhasznalok where id='$id'")or die(mysqli_error());
-$row=mysqli_fetch_array($query);
+$query1=mysqli_query($kapcs->db,"SELECT * FROM felhasznalok where id='$id'")or die(mysqli_error());
+$row=mysqli_fetch_array($query1);
     
   
    if(isset($_POST['profil_update'])) {
@@ -16,20 +16,21 @@ $row=mysqli_fetch_array($query);
         $uj_jelszo = md5($uj_jelszo);
         $jelnlegi_jelszo=md5($jelnlegi_jelszo);
 
-        $sql = "SELECT jelszo FROM felhasznalok WHERE felhasznalonev=$jelenlegi_felhasznalonev";
-        $egyezo_jelszo_lekerdezes=$kapcs->Select($sql);
-        print_r($egyezo_jelszo_lekerdezes['jelszo']);
+        $sql = "SELECT jelszo FROM felhasznalok WHERE felhasznalonev='$jelenlegi_felhasznalonev'";
+        $egyezo_jelszo_lekerdezes=mysqli_query($kapcs->db,$sql)or die(mysqli_error());
+        $egyezo_jelszo=mysqli_fetch_array($egyezo_jelszo_lekerdezes);
         
-        if ($egyezo_jelszo_lekerdezes['jelszo'] == $jelnlegi_jelszo){
+        
+        if ($egyezo_jelszo['jelszo'] == $jelnlegi_jelszo){
         $user_id=$user->GetId();
-        if ($jelenlegi)
+          
         $query = "UPDATE felhasznalok SET jelszo='$uj_jelszo',felhasznalonev='$uj_felhasznalonev' where id='$user_id'";
         
         $result = mysqli_query($kapcs->db, $query) or die(mysqli_error($kapcs->db));
 
         $user->Logout(1,'Teszt1','teszt1@teszt.hu','felhasznalo');
         ?> <script type="text/javascript">
-    alert("Update Successfull.");
+    alert("Sikeres frissítés.");
     </script>
     <?php 
         $user->Login($id,$uj_felhasznalonev,$row['email'],$row['jogosultsag']);
