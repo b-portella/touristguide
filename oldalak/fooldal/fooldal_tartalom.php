@@ -36,4 +36,8 @@
 </div>
 </div>
 </div>
+<h2>Kedves Látogató!</h2>
+<p>Igen jó helyre érkeztél, ha te is a kirándulások szerelmese vagy. Ennek a honlapnak az a célja, hogy a lehető legpontosabban es legrészletesebben eléd tárja az adott hely legszebb látványosságait. Arra szeretnénk kérni, ha te is belevágnál ebbe a szabadidős tevékenységbe, akkor vedd segítségül az oldalunkat. Jó szórakozást kívánunk! Ha bármi kérdés felmerül bátran keress meg minket közösségi oldalainkon, vagy a kapcsolat funkció alatt található e-mailos formon keresztül.</p>
+
+
 </div>
