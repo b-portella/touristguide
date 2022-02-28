@@ -38,7 +38,7 @@ class MyUser
     $ertek = $this->config['value'];
     $_SESSION[$kulcs] = $ertek;
     $_SESSION['user'] = array('id' => $id, 'login' => $login, 'email' => $email, 'jogosultsag' => $jogosultsag);
-    header("location: index.php");
+    
   }
 
   // config_session alapján megszünteti a szükéges munkamenet változókat --> kiléptetés
@@ -47,7 +47,7 @@ class MyUser
     $kulcs = $this->config['key'];
     unset($_SESSION[$kulcs]);
     unset($_SESSION['user']);
-    header("location: index.php");
+    
   }
 
   // a felhasználó bejelentkezett_e, logikai függvény, true-bejelentkezett, false-nincs bejelentkezve

@@ -216,6 +216,13 @@ option {
     border-radius: 10px 10px 10px 10px;
     text-align: center;
 }
-
-
+a  .profil-pics{
+  max-width: 30%;
+  min-width: 100px;
+  margin-top: -8%;
+}
+.profil-pics{
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+}
 
