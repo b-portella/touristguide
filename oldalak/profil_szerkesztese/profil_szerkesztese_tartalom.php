@@ -8,13 +8,29 @@
 
 
 
-<div class=" container form">
+<div class=" container form pt-4">
 <form method="post" action="">
 
   <?php echo $errors;
         echo $info; ?>
     
-   
+    <?php
+        if($user->IsLogin()==true)
+        {
+          echo 
+          '
+         <div class="container">          
+            
+            <a class="profil-pics">
+              <img src="img/avatar/img_avatar1.png" alt="'.$user->Getlogin().'"  class="rounded-pill profil-pics float-center">
+            </a>
+          </div>
+          ';
+        }
+        
+      ?>
+
+
   <div class="row">
   
     <div class="d-flex justify-content-center">
@@ -39,6 +55,8 @@
       </div>
     </div>
   </div>
+  <?php echo $errors;
+        echo $info; ?>
   
   <div class="row">
     <div class="d-flex justify-content-center">

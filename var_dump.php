@@ -37,7 +37,7 @@
   echo "<br>FILES: ";
   print_r($_FILES);
 
-  print_r($egyezo_jelszo_lekerdezes[0]);
+
  
 
 ?>
