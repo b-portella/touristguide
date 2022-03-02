@@ -35,7 +35,7 @@ switch($route->GetMuvelet())
             $errors.="Sikertelen regisztráció! (Foglalt felhasználónév)";
         }else{
             $user->Login($eredmeny,$felhasznalonev,$email,'felhasznalo');
-            $root->Go('fooldal');
+            header('index.php');
         }
 
         

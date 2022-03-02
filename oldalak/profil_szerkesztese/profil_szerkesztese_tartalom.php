@@ -44,7 +44,6 @@
     </div>
   </div>
 
-  hello bello
 
   <div class="row">
     <div class="d-flex justify-content-center">
