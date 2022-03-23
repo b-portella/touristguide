@@ -93,7 +93,7 @@ header {
         border-right: 2px solid white;
     }
     .carousel .carousel-item {
-      height: 350px;
+      height: 300px;
     }
     
     .carousel-item img {
@@ -192,7 +192,7 @@ option {
 }
 @media screen and (min-width: 800px) {
 .carousel .carousel-item {
-  height: 600px;
+  height: 400px;
 }
 .slider-size{
   max-width: 85%;
@@ -243,6 +243,9 @@ h4 {
   .text {
      font-size: 36px;
   }
+  .carousel .carousel-item {
+    height: 600px;
+}
 }
 .card .btn{
   background-color: #3c763d;
@@ -265,12 +268,12 @@ h4 {
   padding: 20px;
   border-radius: 10px 10px 10px 10px;
 }
-.fooldal h2{
+.leiras h2{
 
   color: #105714;
   text-transform: uppercase;
 }
-.fooldal p {
+.leiras p {
   color: #105714;
   text-align: justify;
   text-transform: uppercase;

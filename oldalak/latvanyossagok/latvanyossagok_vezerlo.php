@@ -36,7 +36,7 @@ if (isset($parameterek['keres']) != "") {
  
 }
 
-  $sql = "SELECT l.id,l.nev,t.nev as telepules_nev, m.nev as megye_nev 
+  $sql = "SELECT l.id,l.nev,l.leiras,t.nev as telepules_nev, m.nev as megye_nev 
   FROM latvanyossagok as l 
   INNER JOIN telepulesek as t ON t.id = l.telepules_id
   INNER JOIN megyek as m on m.id = t.megye_id
@@ -48,31 +48,10 @@ $lista = array();
 
 foreach($adatsorok as $sor){
   $latvanyossag_id = $sor['id'];
-  $sql="select kep from kepek where latvanyossag_id = '$latvanyossag_id' limit 3 ";
+  $sql="SELECT kep FROM kepek WHERE latvanyossag_id = '$latvanyossag_id' LIMIT 3 ";
   $kepek = $kapcs->Select($sql);
   $lista[] = array('tartalom' =>$sor, 'kepek' => $kepek );
 }
 
-$image_count = 0;
-$button_html = '';		
-$slider_html = '';
-$slider_pic='';
-while( $lista){	
-	$active_class = '';			
-	if(!$image_count) {
-		$active_class = 'active';					
-		$image_count = 1;
-	}	
-	$image_count++;
-	// slider image html
-    
-	$slider_html.= '<div class="carousel-item '. $active_class.'">';
-    $slider_html.= '<img src="img/latvanyossagok/'.$lista['kepek']['kep'].'" alt="'.$lista['tartalom']['id'].'.jpg" class="d-block w-100">';
-    $slider_html.= "<div class='carousel-caption mx-auto'><h3 style='display:inline-block; background: rgba(0, 0, 0, 0.4);'>".$lista['tartalom']['nev']."</h3><br>";
-$slider_html.= "<p style='display:inline-block; background: rgba(0, 0, 0, 0.4);'>".$lista['tartalom']['telepules_nev']."</p></div></div>";
-	// Button html
-	$button_html.= "<button type='button' data-bs-target='#demo' data-slide-to='".$image_count."' class='".$active_class."'></button>";
-    
-}
 ?>
 
