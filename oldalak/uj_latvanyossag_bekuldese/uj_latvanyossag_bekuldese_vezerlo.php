@@ -37,7 +37,7 @@ $telepules_id ="";
       else
       {        
         $allapot = 'uj';
-        $info = 'Látványosság beküldése sikeresen megtörtént! Addig nem látszik a rendszerben, amíg az adminisztrátor nem ellenőrzi, és aztán jóvá kell azt hgynia!';
+        $info = 'Látványosság beküldése sikeresen megtörtént! Addig nem látszik a rendszerben, amíg az adminisztrátor nem ellenőrzi, és aztán jóvá kell azt hagynia!';
       }
       
       $sql="insert into latvanyossagok (nev, leiras, gps_szelesseg, gps_hosszusag, cim, telepules_id, allapot) values ('$nev', '$leiras', '$gps_szelesseg', '$gps_hosszusag', '$cim', '$telepules_id', '$allapot')";

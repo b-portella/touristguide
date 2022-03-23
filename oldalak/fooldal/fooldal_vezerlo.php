@@ -24,8 +24,8 @@ while( $rows = mysqli_fetch_assoc($resultset)){
     
 	$slider_html.= '<div class="carousel-item '. $active_class.'">';
     $slider_html.= '<img src="img/latvanyossagok/'.$rows['kep'].'" alt="1.jpg" class="d-block w-100">';
-    $slider_html.= "<div class='carousel-caption'><h3>".$rows['latvanyossag_nev']."</h3>";
-    $slider_html.= "<p>".$rows['telepules_nev']."</p></div></div>";
+    $slider_html.= "<div class='carousel-caption mx-auto'><h3 style='display:inline-block; background: rgba(0, 0, 0, 0.4);'>".$rows['latvanyossag_nev']."</h3><br>";
+$slider_html.= "<p style='display:inline-block; background: rgba(0, 0, 0, 0.4);'>".$rows['telepules_nev']."</p></div></div>";
 	// Button html
 	$button_html.= "<button type='button' data-bs-target='#demo' data-slide-to='".$image_count."' class='".$active_class."'></button>";
     

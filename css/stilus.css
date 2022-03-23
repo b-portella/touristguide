@@ -208,13 +208,23 @@ option {
     
 
 }}
-.welcome-background{
-  margin: 10px auto;
+.background{
+
     padding: 20px;
     border: 1px solid #804000;
     background: #ffce99;
     border-radius: 10px 10px 10px 10px;
     text-align: center;
+}
+.card-header{
+  background-color: #105714;
+  border: none;
+}
+.card-header:first-child {
+  border-radius: 10px 10px 10px 10px;
+}
+.card-footer {
+  background-color: transparent;
 }
 a  .profil-pics{
   max-width: 30%;
@@ -225,4 +235,46 @@ a  .profil-pics{
   padding-top: .3125rem;
   padding-bottom: .3125rem;
 }
+h4 {
+  font-size: 3vw;
+  max-height:fit-content;
+}
+@media screen and (min-width: 1200px) {
+  .text {
+     font-size: 36px;
+  }
+}
+.card .btn{
+  background-color: #3c763d;
+  padding: 3px;
+}
+.card .deletebtn {
+  background: rgb(184, 29, 29);
+  color:white;
+  padding: 3px;
+  margin-left: auto;
+}
+.card .checkbtn{
+  background: rgb(3, 170, 3);
+  color:white;
+  padding: 3px;
+  margin-right: 2px;
+}
+#collapsebg{
+  background-color: #105714;
+  padding: 20px;
+  border-radius: 10px 10px 10px 10px;
+}
+.fooldal h2{
+
+  color: #105714;
+  text-transform: uppercase;
+}
+.fooldal p {
+  color: #105714;
+  text-align: justify;
+  text-transform: uppercase;
+  border-bottom: 5px solid #105714;
+}
+
 

@@ -24,7 +24,7 @@
             </div>
             
             <div class="col-sm-4">
-                <h4 class="mx-auto">Magyar Természetjáró Szövetség</h4>
+                <h3 class="mx-auto">Magyar Természetjáró Szövetség</h3>
                 <div class="btn-group dropstart d-none d-md-block">
                 <button type="button" class="btn btn-transparent dropdown-toggle h5 hidden-sm" data-bs-toggle="dropdown" aria-expanded="false">
                             Oldalak
