@@ -88,22 +88,6 @@ header {
     background-color:#ffce99;
     width: 300px !important;  
   }
-  @media screen and (min-width: 600px) {
-    .custom-border-right {
-        border-right: 2px solid white;
-    }
-    .carousel .carousel-item {
-      height: 300px;
-    }
-    
-    .carousel-item img {
-        position: absolute;
-        object-fit:cover;
-        top: 0;
-        left: 0;
-        min-height: 200px;
-    }
-}
 
   .custom-menu{
     background-color: #105714;
@@ -131,6 +115,11 @@ header {
 .form  input[type=file]{
   margin-bottom: 5% ;
 }
+#pics{
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 10px 10px;
+}
 .image{
   text-align: justify;
   width: 75%;
@@ -138,6 +127,15 @@ header {
 .image img{
   border-radius: 6rem;
   max-height: 200PX;
+}
+.pics-delete{
+  height: 500px;
+  overflow: auto;
+}
+.pics-delete button{
+  margin-top: -40px;
+  padding: 5px;
+
 }
 .contact-form form{
   padding: 14%;
@@ -190,24 +188,34 @@ option {
   border-radius: 10px 10px 10px 10px;
   overflow: hidden;
 }
-@media screen and (min-width: 800px) {
-.carousel .carousel-item {
-  height: 400px;
+ @media screen and (min-width: 1200px) {
+  .text {
+     font-size: 36px;
+  }
+  .carousel .carousel-inner {
+    height: 600px;
 }
-.slider-size{
-  max-width: 85%;
+  .carousel-item{
+    position:static;
+
 }
-
-
-.carousel-item img {
+  .carousel-item img {
     position: absolute;
     object-fit:cover;
     top: 0;
     left: 0;
-    min-height: 500px;
-    
-
-}}
+    width: auto;
+    height: 600px;
+}
+  .slider-size{
+    max-width: 85%;
+    height: 600px
+}
+h4 {
+  font-size: 2.3vw;
+  max-height:fit-content;
+}
+}
 .background{
 
     padding: 20px;
@@ -235,27 +243,21 @@ a  .profil-pics{
   padding-top: .3125rem;
   padding-bottom: .3125rem;
 }
-h4 {
-  font-size: 3vw;
-  max-height:fit-content;
-}
-@media screen and (min-width: 1200px) {
-  .text {
-     font-size: 36px;
-  }
-  .carousel .carousel-item {
-    height: 600px;
-}
-}
 .card .btn{
   background-color: #3c763d;
   padding: 3px;
 }
-.card .deletebtn {
+.modifybtn {
+  color:white;
+  padding: 3px;
+  margin-left:auto;
+}
+.deletebtn {
   background: rgb(184, 29, 29);
   color:white;
   padding: 3px;
   margin-left: auto;
+  margin-right: 2px;
 }
 .card .checkbtn{
   background: rgb(3, 170, 3);
@@ -279,5 +281,23 @@ h4 {
   text-transform: uppercase;
   border-bottom: 5px solid #105714;
 }
+#images-button{
+  background-color: #3c763d;
+  color:white;
+  padding: 3px;
+  margin-left:auto;
+}
 
+.photo-gallery .photos {
+  padding-bottom:20px;
+}
 
+.photo-gallery .item {
+  padding-bottom:30px;
+}
+
+.photo-gallery .btn{
+  background-color: #3c763d;
+  padding: 10px;
+  margin-top: -20px;
+}

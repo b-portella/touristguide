@@ -21,14 +21,21 @@ switch($route->GetMuvelet())
         
         $eredmeny=$kapcs->Select($query);
         
-        
-        if (count($eredmeny) == 1) {
+      if (count($eredmeny) == 1){
+         
+        if ($eredmeny[0]['torolt'] == "igen") {
+          $errors.= "A felhasználó törölve lett!";
+          
+        }
+        if ($eredmeny[0]['torolt'] == "nem" ) {
           $eredmeny = $eredmeny[0];
           $user->Login($eredmeny['id'],$felhasznalonev,$eredmeny['email'],$eredmeny['jogosultsag']);
           header("location: index.php");
           
 
-        }else {
+        } 
+      }
+        if (count($eredmeny) == 0){
           $errors.=  "A felhasználónév vagy a jelszó nem helyes<br>";
         }
     }

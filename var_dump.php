@@ -1,5 +1,6 @@
 <?php
-   //return;
+   
+  //return;
   
   echo '<hr>';
 
@@ -36,9 +37,6 @@
 
   echo "<br>FILES: ";
   print_r($_FILES);
-
-  echo "<br>lista: ";
-  print_r($lista);
 
  
 

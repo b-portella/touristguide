@@ -53,5 +53,30 @@ foreach($adatsorok as $sor){
   $lista[] = array('tartalom' =>$sor, 'kepek' => $kepek );
 }
 
+$felhasznalo_id =$user->GetId();
+
+$sql="SELECT nev FROM utiterv WHERE felhasznalo_id = ".$felhasznalo_id;
+$utiterv_nevek=$kapcs->Select($sql);
+
+
+
+if (isset($_POST['id'])){
+
+$nev.=$_POST['lista'];
+$sql="SELECT id FROM utiterv WHERE nev = '".$_POST['lista']."'";
+$utitervek_id=$kapcs->Select($sql);
+
+$utiterv_id = $utitervek_id[0]['id'];
+
+$sql = "SELECT id FROM utiterv_elemei WHERE utiterv_id =".$utiterv_id;
+$sorszamok=$kapcs->Select($sql);
+
+$sorszam = count($sorszamok) + 1;
+
+$sql = "INSERT INTO utiterv_elemei (utiterv_id,latvanyossag_id,sorrend)
+        VALUES (".$utiterv_id.", ".$_POST['id'].", ".$sorszam." )";
+        $insert=$kapcs->Insert($sql);
+}
+
 ?>
 

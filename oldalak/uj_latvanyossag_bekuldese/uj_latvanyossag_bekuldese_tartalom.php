@@ -9,11 +9,16 @@
               
 
 <div class="container form">
-  <form name="frm01" method="post" action="index.php" enctype="multipart/form-data" onsubmit="return true">
+  <form name="frm01" id="form" method="post" action="index.php" enctype="multipart/form-data" onsubmit="return true">
     <input type="hidden" name="oldal" value="<?=$route->GetOldal()?>">
     <input type="hidden" name="muvelet" value="uj">
     <input type="hidden" name="lap" value="<?=$route->GetLap()?>">
-      
+    
+    <div id="messages" class="hide" role="alert">
+    <div id="messages_content"></div>
+    </div>
+    
+
 
 
       <div class="form-group">
@@ -74,4 +79,10 @@
 
 <script>
   document.frm01.telepules_id.selectedIndex=-1;
+  $('#form').submit(function(e) {
+                $('#messages').removeClass('hide').addClass('alert alert-success alert-dismissible').slideDown().show();
+                $('#messages_content').html('<?php echo'<p>'.$_SESSION['info_msg'].'</p>'?>');
+                $('#modal').modal('show');
+                e.preventDefault();
+            });
 </script>
